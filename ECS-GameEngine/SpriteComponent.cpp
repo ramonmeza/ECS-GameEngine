@@ -49,7 +49,7 @@ SpriteComponent::~SpriteComponent()
 }
 
 /// <summary>
-/// 
+/// The tick function moves the sprite to match the parent's transform.
 /// </summary>
 void SpriteComponent::Tick(float DeltaTime)
 {

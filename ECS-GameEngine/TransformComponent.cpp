@@ -14,8 +14,3 @@ TransformComponent::TransformComponent(class Entity* parent)
 TransformComponent::~TransformComponent()
 {
 }
-
-void TransformComponent::Tick(float DeltaTime)
-{
-
-}
