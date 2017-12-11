@@ -17,9 +17,9 @@ int main(int argc, char* argv[])
 
 	// Setup entity input
 	game.Input.MapKey("MoveUp", sf::Keyboard::Key::W, [&]() { ent->GetComponent<MovementComponent>()->MoveUp(); });
-	game.Input.MapKey("MoveDown", sf::Keyboard::Key::A, [&]() { ent->GetComponent<MovementComponent>()->MoveDown(); });
-	game.Input.MapKey("MoveRight", sf::Keyboard::Key::S, [&]() { ent->GetComponent<MovementComponent>()->MoveRight(); });
-	game.Input.MapKey("MoveLeft", sf::Keyboard::Key::D, [&]() { ent->GetComponent<MovementComponent>()->MoveLeft(); });
+	game.Input.MapKey("MoveDown", sf::Keyboard::Key::S, [&]() { ent->GetComponent<MovementComponent>()->MoveDown(); });
+	game.Input.MapKey("MoveRight", sf::Keyboard::Key::D, [&]() { ent->GetComponent<MovementComponent>()->MoveRight(); });
+	game.Input.MapKey("MoveLeft", sf::Keyboard::Key::A, [&]() { ent->GetComponent<MovementComponent>()->MoveLeft(); });
 
 	// Add entity to game
 	game.AddEntity(ent);
