@@ -20,7 +20,7 @@ void InputManager::MapKey(std::string name, sf::Keyboard::Key key, Entity* objec
 	m_KeyMappings.push_back(mapping);
 }
 
-bool InputManager::Action(std::string name)
+bool InputManager::Key(std::string name)
 {
 	// Try to find action mapping
 	auto found = std::find_if(m_KeyMappings.begin(), m_KeyMappings.end(), 
@@ -37,7 +37,7 @@ bool InputManager::Action(std::string name)
 	return false;
 }
 
-void InputManager::ActionTest(std::string name)
+void InputManager::Action(std::string name)
 {
 	// Try to find action mapping
 	auto found = std::find_if(m_KeyMappings.begin(), m_KeyMappings.end(),

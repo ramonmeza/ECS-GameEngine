@@ -45,17 +45,17 @@ int main(int argc, char* argv[])
 		// Test action mappings
 		//std::function<void()> f = std::function<void()>([&]() {ent.transform->position.y += 10.0f * deltaTime.asSeconds(); });
 
-		if (Input.Action("MoveUp"))
-			Input.ActionTest("MoveUp");
+		if (Input.Key("MoveUp"))
+			Input.Action("MoveUp");
 
-		if (Input.Action("MoveDown"))
-			Input.ActionTest("MoveDown");
+		if (Input.Key("MoveDown"))
+			Input.Action("MoveDown");
 
-		if (Input.Action("MoveRight"))
-			Input.ActionTest("MoveRight");
+		if (Input.Key("MoveRight"))
+			Input.Action("MoveRight");
 
-		if (Input.Action("MoveLeft"))
-			Input.ActionTest("MoveLeft");
+		if (Input.Key("MoveLeft"))
+			Input.Action("MoveLeft");
 
 
 		// Update

@@ -20,9 +20,9 @@ public:
 	~InputManager();
 
 	void MapKey(std::string name, sf::Keyboard::Key key, Entity* object, std::function<void()> action);
-	bool Action(std::string name);
+	bool Key(std::string name);
 
-	void ActionTest(std::string name);
+	void Action(std::string name);
 
 private:
 	struct KeyAction
