@@ -21,11 +21,14 @@
   <ItemGroup>
     <ClInclude Include="Component.hpp" />
     <ClInclude Include="Entity.hpp" />
+    <ClInclude Include="InputManager.hpp" />
     <ClInclude Include="SpriteComponent.hpp" />
     <ClInclude Include="TransformComponent.hpp" />
+    <ClInclude Include="World.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="TransformComponent.cpp" />

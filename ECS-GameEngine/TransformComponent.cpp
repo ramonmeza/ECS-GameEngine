@@ -1,5 +1,7 @@
 #include "TransformComponent.hpp"
 
+#include "World.hpp"
+
 TransformComponent::TransformComponent(class Entity* parent)
 {
 	// Set the parent of this component
@@ -13,4 +15,14 @@ TransformComponent::TransformComponent(class Entity* parent)
 
 TransformComponent::~TransformComponent()
 {
+}
+
+void TransformComponent::Move(sf::Vector2f dir)
+{
+	position += dir * TimeDeltaTime;
+}
+
+void TransformComponent::Tick(float DeltaTime)
+{
+
 }
