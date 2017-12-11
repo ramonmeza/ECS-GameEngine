@@ -1,7 +1,5 @@
 #include "TransformComponent.hpp"
 
-#include "World.hpp"
-
 TransformComponent::TransformComponent()
 {
 	// Initialize position, rotationm, and scale
@@ -12,12 +10,4 @@ TransformComponent::TransformComponent()
 
 TransformComponent::~TransformComponent()
 {
-}
-
-/// <summary>
-/// Moves the entity a given direction.
-/// </summary>
-void TransformComponent::Move(sf::Vector2f dir)
-{
-	position += dir * World::DeltaTime;
 }

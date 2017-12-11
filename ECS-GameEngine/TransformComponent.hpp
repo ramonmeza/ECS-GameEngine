@@ -18,7 +18,5 @@ public:
 	float rotation;
 	sf::Vector2f scale;
 
-	void Move(sf::Vector2f dir);
-
 	virtual void Tick(float DeltaTime) {}
 };

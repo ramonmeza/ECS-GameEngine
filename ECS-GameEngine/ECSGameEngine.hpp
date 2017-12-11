@@ -16,6 +16,7 @@
 
 // Components
 #include "Component.hpp"
+#include "MovementComponent.hpp"
 #include "SpriteComponent.hpp"
 #include "TransformComponent.hpp"
 
@@ -27,6 +28,7 @@ public:
 	~ECSGameEngine();
 
 	void AddEntity(Entity* entity);
+
 	void Run();
 
 	InputManager Input;
