@@ -11,7 +11,7 @@
 class TransformComponent : public Component
 {
 public:
-	explicit TransformComponent(class Entity* parent);
+	TransformComponent();
 	~TransformComponent();
 
 	sf::Vector2f position;
@@ -20,6 +20,5 @@ public:
 
 	void Move(sf::Vector2f dir);
 
-	virtual void Tick(float DeltaTime);
+	virtual void Tick(float DeltaTime) {}
 };
-

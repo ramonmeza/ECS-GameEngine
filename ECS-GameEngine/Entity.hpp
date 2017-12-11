@@ -22,7 +22,7 @@ public:
 	void Tick(float DeltaTime);
 	void AddComponent(Component* component);
 
-	class TransformComponent* transform;
+	TransformComponent* transform;
 
 protected:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;

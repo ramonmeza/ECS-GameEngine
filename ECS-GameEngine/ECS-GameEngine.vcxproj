@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Component.hpp" />
     <ClInclude Include="Entity.hpp" />
+    <ClInclude Include="ECSGameEngine.hpp" />
     <ClInclude Include="InputManager.hpp" />
     <ClInclude Include="SpriteComponent.hpp" />
     <ClInclude Include="TransformComponent.hpp" />
@@ -28,10 +29,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="ECSGameEngine.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="TransformComponent.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

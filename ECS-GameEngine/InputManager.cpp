@@ -11,7 +11,7 @@ InputManager::~InputManager()
 	m_KeyMappings.clear();
 }
 
-void InputManager::MapKey(std::string name, sf::Keyboard::Key key, Entity* object, std::function<void()> action)
+void InputManager::MapKey(std::string name, sf::Keyboard::Key key, std::function<void()> action)
 {
 	// Create a new key action to add to the mappings
 	KeyAction* mapping = new KeyAction(name, key, action);

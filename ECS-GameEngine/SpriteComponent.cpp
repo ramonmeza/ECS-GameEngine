@@ -2,11 +2,8 @@
 
 #include "SpriteComponent.hpp"
 
-SpriteComponent::SpriteComponent(std::string filePath, Entity* parent)
+SpriteComponent::SpriteComponent(std::string filePath)
 {
-	// Set the parent of this component
-	m_Parent = parent;
-
 	try
 	{
 		// Create a new sprite
@@ -18,11 +15,6 @@ SpriteComponent::SpriteComponent(std::string filePath, Entity* parent)
 
 		// Create sprite from the texture
 		m_Sprite = new sf::Sprite(*m_Texture);
-
-		// Position the sprite to the parent's transform
-		m_Sprite->setPosition(m_Parent->transform->position);
-		m_Sprite->setRotation(m_Parent->transform->rotation);
-		m_Sprite->setScale(m_Parent->transform->scale);
 	}
 	catch (std::string ExceptionMsg)
 	{
@@ -53,10 +45,13 @@ SpriteComponent::~SpriteComponent()
 /// </summary>
 void SpriteComponent::Tick(float DeltaTime)
 {
-	// Position the sprite to the parent's transform
-	m_Sprite->setPosition(m_Parent->transform->position);
-	m_Sprite->setRotation(m_Parent->transform->rotation);
-	m_Sprite->setScale(m_Parent->transform->scale);
+	if (m_Parent != nullptr)
+	{
+		// Position the sprite to the parent's transform
+		m_Sprite->setPosition(m_Parent->transform->position);
+		m_Sprite->setRotation(m_Parent->transform->rotation);
+		m_Sprite->setScale(m_Parent->transform->scale);
+	}
 }
 
 /// <summary>

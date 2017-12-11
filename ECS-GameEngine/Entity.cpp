@@ -3,7 +3,8 @@
 Entity::Entity()
 {
 	// Create the transform component
-	transform = new TransformComponent(this);
+	transform = new TransformComponent();
+	transform->SetParent(this);
 }
 
 Entity::~Entity()
@@ -23,6 +24,9 @@ void Entity::AddComponent(class Component* component)
 {
 	if (component != nullptr)
 	{
+		// Set component's parent to this entity
+		component->SetParent(this);
+
 		// Add the component to the components list
 		m_Components.push_back(component);
 	}

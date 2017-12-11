@@ -2,11 +2,8 @@
 
 #include "World.hpp"
 
-TransformComponent::TransformComponent(class Entity* parent)
+TransformComponent::TransformComponent()
 {
-	// Set the parent of this component
-	m_Parent = parent;
-
 	// Initialize position, rotationm, and scale
 	position = sf::Vector2f(0.0f, 0.0f);
 	rotation = 0.0f;
@@ -17,12 +14,10 @@ TransformComponent::~TransformComponent()
 {
 }
 
+/// <summary>
+/// Moves the entity a given direction.
+/// </summary>
 void TransformComponent::Move(sf::Vector2f dir)
 {
-	position += dir * TimeDeltaTime;
-}
-
-void TransformComponent::Tick(float DeltaTime)
-{
-
+	position += dir * World::DeltaTime;
 }

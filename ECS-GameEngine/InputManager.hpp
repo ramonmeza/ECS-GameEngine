@@ -19,7 +19,7 @@ public:
 	InputManager();
 	~InputManager();
 
-	void MapKey(std::string name, sf::Keyboard::Key key, Entity* object, std::function<void()> action);
+	void MapKey(std::string name, sf::Keyboard::Key key, std::function<void()> action);
 	bool Key(std::string name);
 
 	void Action(std::string name);
